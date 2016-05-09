@@ -26,25 +26,29 @@ ManageEmployees:
       name
       phone number
       ... etc
-Person
+Person Methods:
+      getName;
+      getId;
+      setName;
+      setId;
       
 BankeTeller Methods implements person:
-    login
-    Bank.ManageClients.*;
-    Bank.ManageAccounts.*;
-    //all the subsystems
+      login
+      Bank.ManageClients.*;
+      Bank.ManageAccounts.*;
+      //all the subsystems
   
 PersonalBanker methods implements BankTeller:
-    ProvideFinancialConsultation;
-    LoanMoneyToClients;
-    Bank.ManageAccounts.AddAccount
-    Bank.ManageAccounts.RemoveAccount;
+      ProvideFinancialConsultation;
+      LoanMoneyToClients;
+      Bank.ManageAccounts.AddAccount
+      Bank.ManageAccounts.RemoveAccount;
   
 CommercialBanker Methods implements PersonalBanker:
   
 
 Branch Manager Methods implements PersonalBanker:
-    AuthorizeRequest;
+      AuthorizeRequest;
   
 
 
