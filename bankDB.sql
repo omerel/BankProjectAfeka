@@ -5,7 +5,7 @@ create table bank
 		id int
 	);
 create table person
-	(
+	( 
 		id int primary key,
 		 name varchar(20)
 	);
