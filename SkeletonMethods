@@ -1,31 +1,31 @@
 Methods that are needed :
-
-ManageEmployees:
-
-  ManageBankers:
-      add banker
-      remove banker
-      ... etc      
-  ManageManagers:
-      add Manager
-      remove Manager
-      ... etc
-  ManageClients:
-      add Client 
-      remove Client
-  ManageAccounts:
-      TransferMoney
-      checkBankStatus
-      depositMoney
-      withdrawMoney
-      transferMoney
-      add Account - Limited access
-      remove Accont - Limited access
-      ... etc
-  UpdateInfo:
-      name
-      phone number
-      ... etc
+Banke Methods:
+    ManageEmployees:
+      
+        ManageBankers:
+              add banker
+              remove banker
+              ... etc      
+        ManageManagers:
+              add Manager
+              remove Manager
+              ... etc
+        ManageClients:
+              add Client 
+              remove Client
+        ManageAccounts:
+              TransferMoney
+              checkBankStatus
+              depositMoney
+              withdrawMoney
+              transferMoney
+              add Account - Limited access
+              remove Accont - Limited access
+              ... etc
+    UpdateInfo:
+        name
+        phone number
+        ... etc
 Person Methods:
       getName;
       getId;
