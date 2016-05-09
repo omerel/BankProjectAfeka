@@ -1,0 +1,59 @@
+Methods that are needed :
+
+ManageEmployees:
+
+  ManageBankers:
+      add banker
+      remove banker
+      ... etc      
+  ManageManagers:
+      add Manager
+      remove Manager
+      ... etc
+  ManageClients:
+      add Client 
+      remove Client
+  ManageAccounts:
+      TransferMoney
+      checkBankStatus
+      depositMoney
+      withdrawMoney
+      transferMoney
+      add Account - Limited access
+      remove Accont - Limited access
+      ... etc
+  UpdateInfo:
+      name
+      phone number
+      ... etc
+Person
+      
+BankeTeller Methods implements person:
+    login
+    Bank.ManageClients.*;
+    Bank.ManageAccounts.*;
+    //all the subsystems
+  
+PersonalBanker methods implements BankTeller:
+    ProvideFinancialConsultation;
+    LoanMoneyToClients;
+    Bank.ManageAccounts.AddAccount
+    Bank.ManageAccounts.RemoveAccount;
+  
+CommercialBanker Methods implements PersonalBanker:
+  
+
+Branch Manager Methods implements PersonalBanker:
+    AuthorizeRequest;
+  
+
+
+      
+      
+      
+  
+
+
+
+
+    
