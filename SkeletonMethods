@@ -1,5 +1,9 @@
 Methods that are needed :
 Banke Methods:
+    List<Client>
+    List<Employees>
+    List<Accounts>
+    List<Loans>
     ManageEmployees:
       
         ManageBankers:
@@ -27,12 +31,19 @@ Banke Methods:
         phone number
         ... etc
 Person Methods:
+    String name;
+    int Id;
+    int PhoneNum;
+    
       getName;
       getId;
       setName;
       setId;
       
 BankeTeller Methods implements person:
+    int BankerId;
+    int Password;
+    
       login
       Bank.ManageClients.*;
       Bank.ManageAccounts.*;
@@ -48,12 +59,15 @@ CommercialBanker Methods implements PersonalBanker:
   
 
 Branch Manager Methods implements PersonalBanker:
+
       AuthorizeRequest;
   
-
+* all of the banker methods are thier own methods, and in them we check the values and then send to the Bank.Method.*;
+* the Bank in directly connected to the database and is the only one able to update it.
+* at the moment client has no methods since he does no use the application.
 
       
-      
+    
       
   
 
