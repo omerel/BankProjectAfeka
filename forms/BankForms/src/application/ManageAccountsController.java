@@ -6,11 +6,15 @@ import javafx.scene.control.Button;
 
 import javafx.scene.control.TextField;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javafx.event.ActionEvent;
 
 import javafx.scene.control.Label;
 
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
 
 public class ManageAccountsController {
 	@FXML
@@ -63,8 +67,12 @@ public class ManageAccountsController {
 	private Button SubmitClient;
 	@FXML
 	private Button btnPlus;
+	@FXML
+	private BorderPane MAccountsPane;
 	
-	//private Account A;
+	
+	private Account Account;
+	private List<Client> clients = new ArrayList<>();;
 	private boolean loggedFlag = false;
 	private void reset(){
 		
@@ -78,6 +86,7 @@ public class ManageAccountsController {
 			String password = this.Apass.getText();
 			loggedFlag = true;
 			//check if Account exists and make Account logged in
+			reset();
 		}catch(Exception e )
 		{
 			System.out.println("an Exception has Occured!!");
@@ -92,7 +101,6 @@ public class ManageAccountsController {
 			//delete the Account
 			reset();
 			this.loggedFlag = false;
-			
 		}
 	}
 	// Event Listener on Button[#Withdrawbtn].onAction
@@ -134,10 +142,8 @@ public class ManageAccountsController {
 	// Event Listener on Button[#printbtn].onAction
 	@FXML
 	public void printBalance(ActionEvent event) {
-	//	this.AccountID.setText(Account.getID());
-	//	this.Balance.setText(Account.getBalance());		
-	
-		//need Account class
+		this.AccountID.setText(Account.getID());
+		this.Balance.setText(Account.getBalance());		
 	}
 	// Event Listener on Button[#depositbtn].onAction
 	@FXML
@@ -146,6 +152,7 @@ public class ManageAccountsController {
 			int ammount= Integer.parseInt(this.DepositAmount.getText());
 			int confirm= Integer.parseInt(this.DepositCon.getText());
 			if(ammount==confirm){
+				//search for that  account in the database.
 				//deposit money to the logged in account.
 			}
 			//check if Account exists and make Account logged in
@@ -162,6 +169,7 @@ public class ManageAccountsController {
 		try{
 			int confirm= Integer.parseInt(this.WithdrawCon.getText());
 			String password = this.PASSTXT.getText();
+			
 			//check if Account exists and make Account logged in
 		}catch(Exception e )
 		{
@@ -173,6 +181,11 @@ public class ManageAccountsController {
 	@FXML
 	public void AddClientToAccount(ActionEvent event) {
 		int accountID= Integer.parseInt(this.IDTXT.getText());
+		Client c = null;
+		if(c!=null)
+		this.clients.add(c);
+		//search for the client in the database
+		//if he exists.
 		// make a List<Cliens> and add to it
 	}
 }

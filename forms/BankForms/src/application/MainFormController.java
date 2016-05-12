@@ -1,10 +1,16 @@
 package application;
 
 import javafx.fxml.FXML;
-
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 
 import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 import javafx.event.ActionEvent;
 
@@ -35,7 +41,9 @@ public class MainFormController {
 	private Label PoneLBL;
 	@FXML
 	private Label EmailLBL;
-
+	
+	@FXML
+	private BorderPane MainPane;
 	// Event Listener on Button[#ESubmit].onAction
 	@FXML
 	public void loginE(ActionEvent event) {
@@ -44,6 +52,7 @@ public class MainFormController {
 		String password = this.EpassTxt.getText();
 		//check if the employee is in the system and goto menu form
 		System.out.println("loginE");
+		this.GotoMenu();
 	}catch(Exception e )
 	{
 		System.out.println("an Exception has Occured!!");
@@ -68,8 +77,12 @@ public class MainFormController {
 		int managerID = Integer.parseInt(this.MidTxt.getText());
 		String password = this.MpassTxt.getText();
 		String confirm = this.MpassTxt2.getText();
+
 		if(password.equals(confirm)){
 			//check if is in the system and display menu form
+			//FXMLLoader loader = new FXMLLoader(getClass().getResource("ManageAccounts.fxml"));
+			//Parent root = (Parent)loader.load();
+			this.GotoMenu();
 		}
 		System.out.println("loginm");
 		}catch(Exception e )
@@ -78,6 +91,21 @@ public class MainFormController {
 			reset(null);
 		}
 
+	}
+	private void GotoMenu(){
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("MenuForm.fxml"));
+		Parent root;
+		try {
+			root = (Parent)loader.load();
+			Stage stage = (Stage) this.MainPane.getScene().getWindow();
+			Scene scene = new Scene(root,1000,1000);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			stage.setScene(scene);
+			stage.show();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	// Event Listener on Button[#resetM].onAction
 
