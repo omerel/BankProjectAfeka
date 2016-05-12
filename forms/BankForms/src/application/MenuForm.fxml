@@ -17,7 +17,7 @@
       </ToolBar>
    </top>
    <center>
-      <SubScene fx:id="SubSceneForm" height="713.0" width="1054.0" BorderPane.alignment="CENTER">
+      <SubScene fx:id="SubSceneForm" height="743.0" width="1085.0" BorderPane.alignment="CENTER">
         <root>
           <Region />
         </root>

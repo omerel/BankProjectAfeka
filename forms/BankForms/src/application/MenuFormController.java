@@ -32,11 +32,13 @@ public class MenuFormController {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("ManageAccounts.fxml"));
 		Parent root = (Parent)loader.load();
 		//Stage stage = (Stage) this.MenuPane.getScene().getWindow();
-		Stage stage = new Stage();
-		Scene scene = new Scene(root,1000,1000);
-		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-		stage.setScene(scene);
-		stage.show();
+//		Stage stage = new Stage();
+//		Scene scene = new Scene(root,1000,1000);
+//		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+//		stage.setScene(scene);
+//		stage.show();
+		this.SubSceneForm.rootProperty().set(root); 
+
 	}
 	// Event Listener on Button[#gotoManageClients].onAction
 	@FXML
@@ -44,10 +46,12 @@ public class MenuFormController {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("ManageClients.fxml"));
 		Parent root = (Parent)loader.load();
 		//Stage stage = (Stage) this.MenuPane.getScene().getWindow();
-		Stage stage = new Stage();		Scene scene = new Scene(root,1000,1000);
-		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-		stage.setScene(scene);
-		stage.show();
+//		Stage stage = new Stage();		Scene scene = new Scene(root,1000,1000);
+//		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+//		stage.setScene(scene);
+//		stage.show();
+		this.SubSceneForm.rootProperty().set(root); 
+
 	}
 	// Event Listener on Button[#gotoManageEmployees].onAction
 	@FXML
@@ -55,10 +59,11 @@ public class MenuFormController {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("ManageEmployeeForm.fxml"));
 		Parent root = (Parent)loader.load();
 		//Stage stage = (Stage) this.MenuPane.getScene().getWindow();
-		Stage stage = new Stage();
-		Scene scene = new Scene(root,1000,1000);
-		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-		stage.setScene(scene);
-		stage.show();
+		//Stage stage = new Stage();
+		this.SubSceneForm.rootProperty().set(root); 
+		//Scene scene = new Scene(root,1000,1000);
+		//this.SubSceneForm.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+		//stage.setScene(scene);
+		//stage.show();
 	}
 }

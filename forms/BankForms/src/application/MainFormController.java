@@ -98,7 +98,7 @@ public class MainFormController {
 		try {
 			root = (Parent)loader.load();
 			Stage stage = (Stage) this.MainPane.getScene().getWindow();
-			Scene scene = new Scene(root,1000,1000);
+			Scene scene = new Scene(root,1100,900);		
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			stage.setScene(scene);
 			stage.show();
