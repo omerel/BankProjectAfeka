@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="732.0" prefWidth="970.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ManageAccountsController">
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Exesting Account">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <left>
+                        <Pane prefHeight="672.0" prefWidth="358.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label layoutX="125.0" layoutY="20.0" text="Enter Account">
+                                 <font>
+                                    <Font name="System Bold Italic" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="19.0" layoutY="77.0" text="Account Number:" />
+                              <Label layoutX="19.0" layoutY="122.0" text="PassWord:" />
+                              <TextField fx:id="Anum" layoutX="147.0" layoutY="72.0" />
+                              <TextField fx:id="Apass" layoutX="147.0" layoutY="117.0" />
+                              <ImageView fx:id="Photo" fitHeight="172.0" fitWidth="258.0" layoutX="50.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true" />
+                              <Button fx:id="loginbtn" layoutX="135.0" layoutY="482.0" mnemonicParsing="false" onAction="#loginAccount" text="Confirm" />
+                              <Button fx:id="delbtn" layoutX="117.0" layoutY="597.0" mnemonicParsing="false" onAction="#DeleteAccount" text="Delete Account" textFill="RED">
+                                 <font>
+                                    <Font name="System Bold Italic" size="13.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                     </left>
+                     <center>
+                        <Pane prefHeight="672.0" prefWidth="698.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Accordion layoutX="-4.0" layoutY="9.0" prefHeight="659.0" prefWidth="614.0">
+                                <panes>
+                                    <TitledPane prefHeight="200.0" prefWidth="200.0" text="Withdraw Money">
+                                       <content>
+                                          <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                             <center>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <Label layoutX="63.0" layoutY="41.0" text="Amount :" />
+                                                      <Label fx:id="errWithdraw" layoutX="63.0" layoutY="289.0" prefHeight="21.0" prefWidth="377.0" textFill="#f80000" />
+                                                      <Label layoutX="63.0" layoutY="87.0" text="Confirm :" />
+                                                      <TextField fx:id="withdrawA" layoutX="201.0" layoutY="36.0" />
+                                                      <TextField fx:id="WithdrawCon" layoutX="201.0" layoutY="82.0" />
+                                                      <Button fx:id="Withdrawbtn" layoutX="252.0" layoutY="190.0" mnemonicParsing="false" onAction="#WithdrawMoney" text="Withdraw" />
+                                                   </children>
+                                                </Pane>
+                                             </center>
+                                          </BorderPane>
+                                       </content>
+                                    </TitledPane>
+                                  <TitledPane animated="false" text="Transfer Money">
+                                       <content>
+                                          <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                             <center>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <Label layoutX="75.0" layoutY="66.0" text="Amount:" />
+                                                      <Label layoutX="75.0" layoutY="121.0" text="confirm :" />
+                                                      <Label layoutX="75.0" layoutY="185.0" text="Account :" />
+                                                      <Button fx:id="transbtn" layoutX="215.0" layoutY="265.0" mnemonicParsing="false" onAction="#MakeTransfer" text="Transfer" />
+                                                      <TextField fx:id="transAmount" layoutX="232.0" layoutY="61.0" />
+                                                      <TextField fx:id="tranCon" layoutX="232.0" layoutY="116.0" />
+                                                      <TextField fx:id="transAccount" layoutX="232.0" layoutY="180.0" />
+                                                      <Label fx:id="errtransfer" layoutX="77.0" layoutY="367.0" prefHeight="21.0" prefWidth="358.0" textFill="RED" />
+                                                   </children>
+                                                </Pane>
+                                             </center>
+                                          </BorderPane>
+                                       </content>
+                                    </TitledPane>
+                                  <TitledPane animated="false" text="Check Balance">
+                                       <content>
+                                          <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                             <center>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <Label layoutX="63.0" layoutY="66.0" text="Account ID:" />
+                                                      <Label layoutX="63.0" layoutY="150.0" text="Balance :" />
+                                                      <TextField fx:id="AccountID" layoutX="216.0" layoutY="61.0" />
+                                                      <TextField fx:id="Balance" layoutX="216.0" layoutY="145.0" />
+                                                   </children>
+                                                </Pane>
+                                             </center>
+                                             <top>
+                                                <Label text="Account Balance" BorderPane.alignment="CENTER">
+                                                   <font>
+                                                      <Font name="System Italic" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                             </top>
+                                             <bottom>
+                                                <Button fx:id="printbtn" mnemonicParsing="false" onAction="#printBalance" text="Print" BorderPane.alignment="CENTER" />
+                                             </bottom>
+                                          </BorderPane>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane prefHeight="200.0" prefWidth="200.0" text="Deposit Money">
+                                       <content>
+                                          <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                             <center>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <Label layoutX="58.0" layoutY="76.0" text="Amount :" />
+                                                      <Label layoutX="58.0" layoutY="138.0" text="Confirm :" />
+                                                      <Button fx:id="depositbtn" layoutX="244.0" layoutY="224.0" mnemonicParsing="false" onAction="#Deposit" text="Deposit" />
+                                                      <TextField fx:id="DepositAmount" layoutX="187.0" layoutY="71.0" />
+                                                      <TextField fx:id="DepositCon" layoutX="187.0" layoutY="133.0" />
+                                                   </children>
+                                                </Pane>
+                                             </center>
+                                          </BorderPane>
+                                       </content>
+                                    </TitledPane>
+                                </panes>
+                              </Accordion>
+                           </children>
+                        </Pane>
+                     </center>
+                     <top>
+                        <Label text="Manage Account" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="System Italic" size="19.0" />
+                           </font>
+                        </Label>
+                     </top>
+                  </BorderPane>
+               </content>
+          </Tab>
+          <Tab text="New Account">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <top>
+                        <Label text="Add Account" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                     </top>
+                     <center>
+                        <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label layoutX="107.0" layoutY="85.0" text="Client ID :" />
+                              <Label layoutX="107.0" layoutY="163.0" text="Account numbers :" />
+                              <Label layoutX="107.0" layoutY="247.0" text="Account password : " />
+                              <TextField fx:id="IDTXT" layoutX="259.0" layoutY="80.0" />
+                              <TextField fx:id="NUMTXT" layoutX="259.0" layoutY="158.0" />
+                              <TextField fx:id="PASSTXT" layoutX="259.0" layoutY="242.0" />
+                              <Button fx:id="SubmitClient" layoutX="106.0" layoutY="336.0" mnemonicParsing="false" onAction="#newClientAccount" text="Submit" />
+                              <Button fx:id="btnPlus" layoutX="445.0" layoutY="80.0" mnemonicParsing="false" onAction="#AddClientToAccount" prefHeight="31.0" prefWidth="55.0" text="+" />
+                           </children>
+                        </Pane>
+                     </center>
+                  </BorderPane>
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

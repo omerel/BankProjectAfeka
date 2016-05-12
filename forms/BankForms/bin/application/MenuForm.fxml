@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="788.0" prefWidth="1091.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+          <Button fx:id="gotoManageAccounts" mnemonicParsing="false" onAction="#DisplayManageAccounts" text="Manage Accounts" />
+            <Button fx:id="gotoManageClients" mnemonicParsing="false" onAction="#DisplayManageClients" text="Manage Clients" />
+            <Button fx:id="gotoManageEmployees" mnemonicParsing="false" onAction="#DisplayManageEmployees" text="Manage Employees" />
+        </items>
+      </ToolBar>
+   </top>
+   <center>
+      <SubScene fx:id="SubSceneForm" height="690.0" width="1031.0" BorderPane.alignment="CENTER">
+        <root>
+          <Region />
+        </root>
+      </SubScene>
+   </center>
+</BorderPane>

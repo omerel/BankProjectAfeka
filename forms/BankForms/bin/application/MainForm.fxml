@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="707.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainFormController">
+   <top>
+      <Pane prefHeight="101.0" prefWidth="840.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="221.0" prefHeight="90.0" prefWidth="431.0" text="Welcome to the Lobby">
+               <font>
+                  <Font name="Arial Italic" size="39.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="login">
+               <content>
+                  <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Emlpoyee">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="58.0" layoutY="70.0" prefHeight="33.0" prefWidth="191.0" text="Employee ID:" />
+                                    <Label layoutX="58.0" layoutY="113.0" prefHeight="33.0" prefWidth="191.0" text="Employee Password :" />
+                                    <TextField fx:id="EpassTxt" layoutX="269.0" layoutY="114.0" promptText="password" />
+                                    <TextField fx:id="EidTxt" layoutX="269.0" layoutY="71.0" promptText="ID" />
+                                    <Label layoutX="58.0" layoutY="20.0" prefHeight="33.0" prefWidth="191.0" text="LOGIN">
+                                       <font>
+                                          <Font name="System Bold Italic" size="15.0" />
+                                       </font></Label>
+                                    <Button fx:id="ESubmit" layoutX="58.0" layoutY="184.0" mnemonicParsing="false" onAction="#loginE" text="submit" />
+                                    <Button fx:id="resertE" layoutX="154.0" layoutY="184.0" mnemonicParsing="false" onAction="#reset" text="reset" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Managment">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TextField fx:id="MidTxt" layoutX="240.0" layoutY="88.0" promptText="ID" />
+                                    <TextField fx:id="MpassTxt" layoutX="240.0" layoutY="145.0" promptText="password" />
+                                    <Label layoutX="50.0" layoutY="34.0" text="LOGIN">
+                                       <font>
+                                          <Font name="System Bold Italic" size="15.0" />
+                                       </font></Label>
+                                    <Label layoutX="50.0" layoutY="93.0" prefHeight="20.0" prefWidth="114.0" text="Manager ID:" />
+                                    <Label layoutX="50.0" layoutY="150.0" text="Manager Password:" />
+                                    <Label layoutX="48.0" layoutY="204.0" text="reEnter Password:" />
+                                    <TextField fx:id="MpassTxt2" layoutX="240.0" layoutY="199.0" promptText="re-enter" />
+                                    <Button fx:id="Msubmit" layoutX="50.0" layoutY="258.0" mnemonicParsing="false" onAction="#loginM" text="submit" />
+                                    <Button fx:id="resetM" layoutX="147.0" layoutY="258.0" mnemonicParsing="false" onAction="#reset" text="Reset" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </content>
+          </Tab>
+          <Tab text="view bank details">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="58.0" layoutY="61.0" prefHeight="22.0" prefWidth="49.0" text="name :" />
+                        <Label layoutX="58.0" layoutY="102.0" prefHeight="22.0" prefWidth="128.0" text="Phone Number :" />
+                        <Label layoutX="58.0" layoutY="142.0" prefHeight="22.0" prefWidth="128.0" text="Email :" />
+                        <Label fx:id="nameLBL" ellipsisString="bank name" layoutX="260.0" layoutY="62.0" prefHeight="21.0" prefWidth="195.0" underline="true" wrapText="true" />
+                        <Label fx:id="PoneLBL" ellipsisString="bank name" layoutX="260.0" layoutY="103.0" prefHeight="21.0" prefWidth="195.0" underline="true" wrapText="true" />
+                        <Label fx:id="EmailLBL" ellipsisString="bank name" layoutX="260.0" layoutY="143.0" prefHeight="21.0" prefWidth="195.0" underline="true" wrapText="true" />
+                     </children>
+                  </Pane>
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

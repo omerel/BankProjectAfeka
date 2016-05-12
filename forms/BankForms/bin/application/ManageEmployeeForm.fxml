@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="712.0" prefWidth="927.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <Label text="Manage Employees" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Italic" size="32.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Add Employee">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="80.0" layoutY="78.0" text="ID:" />
+                        <Label layoutX="77.0" layoutY="125.0" text="Name:" />
+                        <Label layoutX="80.0" layoutY="179.0" text="Phone Number:" />
+                        <TextField fx:id="Eid" layoutX="222.0" layoutY="73.0" promptText="ID" />
+                        <TextField fx:id="Ename" layoutX="222.0" layoutY="120.0" promptText="name" />
+                        <TextField fx:id="Ephone" layoutX="222.0" layoutY="174.0" promptText="phone number" />
+                        <Button fx:id="EsubmitAdd" layoutX="77.0" layoutY="261.0" mnemonicParsing="false" onAction="#AddEmployee" text="Submit" />
+                        <Button fx:id="plus" layoutX="409.0" layoutY="174.0" mnemonicParsing="false" onAction="#AddNumber" prefHeight="31.0" prefWidth="44.0" text="+" />
+                        <Label layoutX="81.0" layoutY="228.0" text="Password :" />
+                        <TextField fx:id="EPASS" layoutX="222.0" layoutY="223.0" promptText="pass word" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Remove Employee">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <MenuButton fx:id="employeemn" layoutX="216.0" layoutY="80.0" mnemonicParsing="false" text="Employees">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Action 1" />
+                            <MenuItem mnemonicParsing="false" text="Action 2" />
+                          </items>
+                        </MenuButton>
+                        <MenuButton fx:id="jobmn" layoutX="35.0" layoutY="80.0" mnemonicParsing="false" text="Jobs">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Action 1" />
+                              <MenuItem mnemonicParsing="false" text="Action 2" />
+                           </items>
+                        </MenuButton>
+                        <Button fx:id="removebtn" layoutX="394.0" layoutY="80.0" mnemonicParsing="false" onAction="#removeEmployee" text="remove" textFill="#e80808" />
+                        <Label layoutX="40.0" layoutY="43.0" text="Job :" />
+                        <Label layoutX="216.0" layoutY="43.0" text="Choose Employee :" />
+                     </children>
+                  </Pane>
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
