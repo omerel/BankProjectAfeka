@@ -1,13 +1,15 @@
 package application;
 
 import javafx.fxml.FXML;
-
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 
 import javafx.scene.control.TextField;
 
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 
@@ -16,7 +18,8 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 
-public class ManageAccountsController {
+public class ManageAccountsController  implements Initializable {
+	private system sys;
 	@FXML
 	private TextField Anum;
 	@FXML
@@ -187,5 +190,11 @@ public class ManageAccountsController {
 		//search for the client in the database
 		//if he exists.
 		// make a List<Cliens> and add to it
+	}
+
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		sys = Context.getInstance().getSystem();
+		sys.printhello();
 	}
 }

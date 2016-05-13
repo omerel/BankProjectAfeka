@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<BorderPane fx:id="ManageClientsPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="681.0" prefWidth="814.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="ManageClientsPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="681.0" prefWidth="814.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ManageClientsController">
    <top>
       <Label text="Manage Clients" BorderPane.alignment="CENTER">
          <font>
@@ -19,12 +20,29 @@
         <tabs>
           <Tab text="Add Client">
                <content>
-                  <Pane prefHeight="200.0" prefWidth="200.0" />
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="50.0" layoutY="83.0" text="Name :" />
+                        <Label layoutX="50.0" layoutY="127.0" text="ID:" />
+                        <Label layoutX="50.0" layoutY="253.0" text="Photo:" />
+                        <ImageView fx:id="AddPhoto" fitHeight="150.0" fitWidth="200.0" layoutX="107.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true" />
+                        <Button fx:id="AddClient" layoutX="50.0" layoutY="395.0" mnemonicParsing="false" onAction="#AddClient" text="Submit" />
+                        <TextField fx:id="AddName" layoutX="131.0" layoutY="78.0" />
+                        <TextField fx:id="AddID" layoutX="131.0" layoutY="122.0" />
+                     </children></Pane>
                </content>
           </Tab>
           <Tab text="Remove Client">
                <content>
-                  <Pane prefHeight="200.0" prefWidth="200.0" />
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="53.0" layoutY="72.0" text="Name :" />
+                        <Label layoutX="59.0" layoutY="122.0" text="ID:" />
+                        <Button fx:id="RemoveBTN" layoutX="206.0" layoutY="431.0" mnemonicParsing="false" onAction="#RemoveClient" text="Remove" />
+                        <TextField fx:id="RemoveName" layoutX="150.0" layoutY="67.0" />
+                        <TextField fx:id="RemoveID" layoutX="150.0" layoutY="117.0" />
+                        <ImageView fx:id="RemovePhoto" fitHeight="150.0" fitWidth="200.0" layoutX="143.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></Pane>
                </content>
           </Tab>
         </tabs>
@@ -38,8 +56,8 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <TextArea layoutX="9.0" layoutY="77.0" prefHeight="182.0" prefWidth="184.0" promptText="message for all clients" />
-            <Button layoutX="68.0" layoutY="318.0" mnemonicParsing="false" text="send" />
+            <TextArea fx:id="brodcast" layoutX="9.0" layoutY="77.0" prefHeight="182.0" prefWidth="184.0" promptText="message for all clients" />
+            <Button fx:id="brodBTN" layoutX="68.0" layoutY="318.0" mnemonicParsing="false" text="send" />
          </children>
       </Pane>
    </right>

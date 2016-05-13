@@ -2,6 +2,7 @@ package application;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -11,12 +12,15 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 
 import javafx.scene.control.Label;
 
-public class MainFormController {
+public class MainFormController implements Initializable{
+	private system sys;
 	@FXML
 	private TextField EpassTxt;
 	@FXML
@@ -79,6 +83,7 @@ public class MainFormController {
 		String confirm = this.MpassTxt2.getText();
 
 		if(password.equals(confirm)){
+			sys.setManager();
 			//check if is in the system and display menu form
 			//FXMLLoader loader = new FXMLLoader(getClass().getResource("ManageAccounts.fxml"));
 			//Parent root = (Parent)loader.load();
@@ -108,5 +113,10 @@ public class MainFormController {
 		}
 	}
 	// Event Listener on Button[#resetM].onAction
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		sys = Context.getInstance().getSystem();
+		sys.printhello();
+	}
 
 }

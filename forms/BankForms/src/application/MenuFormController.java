@@ -2,9 +2,12 @@ package application;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 
@@ -14,7 +17,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.SubScene;
 
-public class MenuFormController {
+public class MenuFormController implements Initializable{
+	private system sys;
 	@FXML
 	private BorderPane MenuPane;
 	@FXML
@@ -65,5 +69,10 @@ public class MenuFormController {
 		//this.SubSceneForm.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		//stage.setScene(scene);
 		//stage.show();
+	}
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		sys = Context.getInstance().getSystem();
+		sys.printhello();
 	}
 }
